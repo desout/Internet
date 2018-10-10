@@ -1,0 +1,264 @@
+
+/* reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+
+
+
+
+
+
+html,
+body,
+main {
+    height: 100%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Helvetica, Arial, Verdana; 
+}
+body {
+    background: url('http://hdqwalls.com/download/1/convict-lake-autumn-4k-2k.jpg') no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.container div {
+    transition: background-color 0.4s, visibility 0.6s, filter 0.4s, opacity 0.4s, left 0.3s linear;
+}
+.editTab {
+    z-index: 100;
+    position: absolute;
+    left: 65%;
+    background-color:rgba(40, 186, 212, 0.40) !important;
+    border-radius: 20px;
+    min-height: 270px;
+}
+.toDoItem,
+.mainTabBlur {
+    transition: z-index 0.4s, filter 0.4s linear;
+}
+.mainTab {
+    background-color:rgba(255,255,255,1);
+}
+.none {
+    visibility: hidden;
+    opacity: 0;
+    left:0;
+}
+.hiddenToDo{
+    display:none !important;
+}
+.toDoItems,
+.outer {
+    z-index: 100;
+    position: relative;
+}
+
+.blur {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+
+.container {
+    position: relative;
+    padding: 5% 0 0 0;
+    display: flex;
+    position:inherit;
+    width:100%;
+    height:100%;
+}
+
+.mainTab,
+.editTab {
+    min-width: 380px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+
+
+.editButtons {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom:10px;
+    justify-content: space-around;
+}
+
+.editButtons button {
+    height: 40px;
+    width: 35%;
+}
+
+.viewValues input {
+    width: 48%;
+}
+
+.viewValues,
+.descriptionValues {
+    display: flex;
+    margin: 5px;
+    justify-content: space-around;
+}
+
+.descriptionValues textarea {
+    width: 98%;
+    resize: vertical;
+    min-height: 100px;
+    max-height: 200px;
+    line-height: normal;
+}
+
+.editValues {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.mainTabBlur {
+    z-index: 90;
+    position: absolute;
+    left:0;
+    top:0;
+    margin:0;
+    background: url('http://hdqwalls.com/download/1/convict-lake-autumn-4k-2k.jpg') no-repeat;
+    opacity: 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.blur {
+    filter: blur(70px);
+    opacity: 1 !important;
+    display: block;
+}
+.toDoItem, .showDoneElements {
+    width: 95%;
+    min-height: 70px;
+    border: 1px solid black;
+    min-height: 80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outer {
+    align-self: center;
+    height: 40px;
+    width: 95%;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+.outer button {
+    height: 100%;
+    width: 100%;
+}
+
+.toDoItems {
+    align-self: center;
+    display: flex;
+    max-height: 620px;
+    overflow-y: auto;
+    flex-direction: column;
+    align-content: space-around;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.mainTab,
+.editTab {
+    flex-basis: 50%;
+}
+
+.closeButton {
+    border: 1px solid transparent;
+    background-color: transparent;
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+}
+
+.closeButton:after {
+    content: "X";
+    display: block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background-color: #FA9595;
+    z-index: 1;
+    right: -20px;
+    top: -20px;
+    bottom: 0;
+    margin: 30px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    font-weight: normal;
+    font-size: 12px;
+    box-shadow: 0 0 2px #E50F0F;
+    cursor: pointer;
+}
