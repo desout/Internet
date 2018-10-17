@@ -21,6 +21,10 @@ namespace lab1.Controllers
         }
 
         // GET: api/<controller>
+        /// <summary>
+        /// Retrieve All Todos
+        /// </summary>
+        /// <returns>A list of ToDos</returns>
         [HttpGet]
         public List<ToDoDTO> Get()
         {
@@ -29,7 +33,11 @@ namespace lab1.Controllers
 
         }
 
-        // GET api/<controller>/5
+        /// <summary>
+        /// Retrieve the todos by their ID.
+        /// </summary>
+        /// <param name="id">The ID of the desired ToDos</param>
+        /// <returns>A string status</returns>
         [HttpGet("{id}")]
        
         public IActionResult Get(int id)
@@ -45,7 +53,10 @@ namespace lab1.Controllers
             }
         }
 
-        // POST api/<controller>
+        /// <summary>
+        /// Retrieve the new ToDos
+        /// </summary>
+        /// <returns>New ToDos</returns>
         [HttpPost]
         public IActionResult Post()
         {
@@ -53,7 +64,12 @@ namespace lab1.Controllers
             var item = ToDoService.CreateToDo();
             return Ok(item);
         }
-        // PUT api/<controller>/5
+        /// <summary>
+        /// Putting ToDo
+        /// </summary>
+        /// <param name="id">id of new ToDos</param>
+        /// <param name="todo">ToDo item</param>
+        /// <returns>A ToDo item</returns>
         [HttpPut("{id}")]
         public IActionResult Put(int id,[FromBody]ToDoDTO todo)
         {

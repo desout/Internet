@@ -16,6 +16,9 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System.Net.Http.Headers;
 using Swashbuckle.AspNetCore.Swagger;
+using System.Reflection;
+using System.IO;
+
 namespace lab1
 {
     public class Startup
@@ -34,9 +37,14 @@ namespace lab1
         {
 
             services.AddMvc().AddXmlSerializerFormatters();
+
             services.AddSwaggerGen(c =>
             {
+
                 c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
+                var xmlFile = $"documentation.XML";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                c.IncludeXmlComments(xmlPath);
             });
         }
 

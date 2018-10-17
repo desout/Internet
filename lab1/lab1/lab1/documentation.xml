@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>lab1.PLL</name>
+    </assembly>
+    <members>
+        <member name="M:lab1.Controllers.todoController.Get">
+            <summary>
+            Retrieve All Todos
+            </summary>
+            <returns>A list of ToDos</returns>
+        </member>
+        <member name="M:lab1.Controllers.todoController.Get(System.Int32)">
+            <summary>
+            Retrieve the todos by their ID.
+            </summary>
+            <param name="id">The ID of the desired ToDos</param>
+            <returns>A string status</returns>
+        </member>
+        <member name="M:lab1.Controllers.todoController.Post">
+            <summary>
+            Retrieve the new ToDos
+            </summary>
+            <returns>New ToDos</returns>
+        </member>
+        <member name="M:lab1.Controllers.todoController.Put(System.Int32,lab1.BLL.DTO.ToDoDTO)">
+            <summary>
+            Putting ToDo
+            </summary>
+            <param name="id">id of new ToDos</param>
+            <param name="todo">ToDo item</param>
+            <returns>A ToDo item</returns>
+        </member>
+    </members>
+</doc>
