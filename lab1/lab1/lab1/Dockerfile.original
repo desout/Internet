@@ -1,0 +1,21 @@
+FROM microsoft/dotnet:2.1-aspnetcore-runtime AS base
+WORKDIR /app
+EXPOSE 80
+
+FROM microsoft/dotnet:2.1-sdk AS build
+WORKDIR /src
+COPY ["lab1/lab1.PLL.csproj", "lab1/"]
+COPY ["lab1.BLL2/lab1.BLL.csproj", "lab1.BLL2/"]
+COPY ["lab1.DAL/lab1.DAL.csproj", "lab1.DAL/"]
+RUN dotnet restore "lab1/lab1.PLL.csproj"
+COPY . .
+WORKDIR "/src/lab1"
+RUN dotnet build "lab1.PLL.csproj" -c Release -o /app
+
+FROM build AS publish
+RUN dotnet publish "lab1.PLL.csproj" -c Release -o /app
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app .
+ENTRYPOINT ["dotnet", "lab1.PLL.dll"]

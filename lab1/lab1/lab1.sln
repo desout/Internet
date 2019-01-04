@@ -5,12 +5,14 @@ VisualStudioVersion = 15.0.28010.2019
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab1.PLL", "lab1\lab1.PLL.csproj", "{4C2D17E9-B7BC-4626-9F3F-86FB0B050F87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab1.BLL", "lab1.BLL2\lab1.BLL.csproj", "{C3060EB6-5463-4BDA-83D0-8DC0BBFCEE8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab1.BLL", "lab1.BLL2\lab1.BLL.csproj", "{C3060EB6-5463-4BDA-83D0-8DC0BBFCEE8D}"
 	ProjectSection(ProjectDependencies) = postProject
 		{C4C2FCA8-1196-4415-8E80-BCEFAC60DB43} = {C4C2FCA8-1196-4415-8E80-BCEFAC60DB43}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab1.DAL", "lab1.DAL\lab1.DAL.csproj", "{C4C2FCA8-1196-4415-8E80-BCEFAC60DB43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab1.DAL", "lab1.DAL\lab1.DAL.csproj", "{C4C2FCA8-1196-4415-8E80-BCEFAC60DB43}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{2FD231C8-76EE-40FC-BF86-C1421BF3876D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -72,6 +74,22 @@ Global
 		{C4C2FCA8-1196-4415-8E80-BCEFAC60DB43}.Release|x64.Build.0 = Release|Any CPU
 		{C4C2FCA8-1196-4415-8E80-BCEFAC60DB43}.Release|x86.ActiveCfg = Release|Any CPU
 		{C4C2FCA8-1196-4415-8E80-BCEFAC60DB43}.Release|x86.Build.0 = Release|Any CPU
+		{2FD231C8-76EE-40FC-BF86-C1421BF3876D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FD231C8-76EE-40FC-BF86-C1421BF3876D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FD231C8-76EE-40FC-BF86-C1421BF3876D}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{2FD231C8-76EE-40FC-BF86-C1421BF3876D}.Debug|ARM.Build.0 = Debug|Any CPU
+		{2FD231C8-76EE-40FC-BF86-C1421BF3876D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2FD231C8-76EE-40FC-BF86-C1421BF3876D}.Debug|x64.Build.0 = Debug|Any CPU
+		{2FD231C8-76EE-40FC-BF86-C1421BF3876D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2FD231C8-76EE-40FC-BF86-C1421BF3876D}.Debug|x86.Build.0 = Debug|Any CPU
+		{2FD231C8-76EE-40FC-BF86-C1421BF3876D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FD231C8-76EE-40FC-BF86-C1421BF3876D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FD231C8-76EE-40FC-BF86-C1421BF3876D}.Release|ARM.ActiveCfg = Release|Any CPU
+		{2FD231C8-76EE-40FC-BF86-C1421BF3876D}.Release|ARM.Build.0 = Release|Any CPU
+		{2FD231C8-76EE-40FC-BF86-C1421BF3876D}.Release|x64.ActiveCfg = Release|Any CPU
+		{2FD231C8-76EE-40FC-BF86-C1421BF3876D}.Release|x64.Build.0 = Release|Any CPU
+		{2FD231C8-76EE-40FC-BF86-C1421BF3876D}.Release|x86.ActiveCfg = Release|Any CPU
+		{2FD231C8-76EE-40FC-BF86-C1421BF3876D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
